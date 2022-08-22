@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #ddd;
+    box-sizing: border-box;
+}
+
+/* navbar */
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    color: #434343;
+    letter-spacing: 2px;
+    
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-evenly;
+
+}
+nav ul li a{
+    color:#434343;
+    text-decoration: none;
+    font-size: 0.9em;
+    
+}
+nav ul li a:hover{
+    color: rgb(255, 255, 255);
+    width: 50px;
+    height: 20px;
+    background: linear-gradient(to right,#000000,#434343);
+    padding: 5px;
+    border-radius: 7px;
+}
+
+/* hamburger menu */
+.hamburger-menu{
+
+        display: none;
+        flex-direction: column;
+        height: 30px;
+        justify-content: space-around;
+        position: relative;
+        z-index: 2;
+        
+}
+
+.hamburger-menu span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: linear-gradient(to right,#000000,#434343);
+    border-radius: 5px;
+    transition: all 0.8s;
+}
+.hamburger-menu input{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.hamburger-menu span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.hamburger-menu span:nth-child(4){
+    transform-origin: 0 100%;
+}
+.hamburger-menu input:checked ~  span:nth-child(2){
+    transform: rotate(45deg) translate(-1px,0);
+}
+.hamburger-menu input:checked ~  span:nth-child(4){
+    transform: rotate(-45deg); translate: (-1px,0.5px);
+}
+.hamburger-menu input:checked ~  span:nth-child(3){
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* main/home section */
+.introduction{
+    margin: 50px auto;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-bottom: 150px;
+}
+.cover{
+    flex: 1;
+}
+.cover img {
+    width: 50vh;
+}
+.intro-txt{
+    font-size: 25px;
+    text-align: center;
+    color: #807373;
+    flex: 1;
+}
+.intro-txt h3{
+        background: linear-gradient(to right,#000000,#434343);
+        border-radius: 50px;
+}
+.intro-txt h1{
+    color: #434343;
+}
+.cover,.intro-txt{
+    padding-left: 10%;
+}
+/* about me section */
+.aboutme-section{
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    color: #434343;
+    letter-spacing: 2px;
+    padding-bottom: 250px;
+}
+.aboutme-section span{
+    display: block;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(to right,#8e0e00,#1f1c18);
+    border-radius: 10px;
+    margin: auto;
+}
+.aboutme-section p{
+    margin-top: 25px;
+}
+/* aside/contact card section*/
+.aside-heading{
+    text-align: center;
+    letter-spacing: 2px;
+
+    
+}
+.aside-heading span{
+    display: block;
+    width: 25%;
+    height: 2px;
+    background: linear-gradient(to right,#8e0e00,#1f1c18);
+    border-radius: 10px;
+    margin: auto;
+
+}
+.aside-container{
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 250px;
+}
+.aside-container img{
+    display: block;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.aside-container button{
+    border: 2px solid #434343;
+    background: transparent;
+    color: #807373;
+    width: 125px;
+    height: 30px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+}
+.aside-container button:hover{
+    background:  linear-gradient(to right,#000000,#434343);
+    color: whitesmoke;
+}
+/* gallery */
+.gallery-container{
+    text-align: center;
+    letter-spacing: 2px;
+    
+}
+.gallery-container span{
+    display: block;
+    width: 25%;
+    height: 2px;
+    background: linear-gradient(to right,#8e0e00,#1f1c18);
+    border-radius: 10px;
+    margin: auto;
+}
+.gallery-begin{
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 3px solid #434343;
+    padding: 10px;
+    border-radius: 5px;
+}
+.this-gallery img{
+    width: 100%;
+}
+.this-gallery{
+    width: 50%;
+}
+/* footer */
+.footer-begin span{
+    display: block;
+    width: 25%;
+    height: 2px;
+    background: linear-gradient(to right,#8e0e00,#1f1c18);
+    border-radius: 10px;
+    margin: auto;
+}
+.footer-begin h5{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+
+
+/* media query */
+
+@media screen and (max-width: 768px){
+    nav ul{
+        width: 50%;
+    }
+    .introduction{
+        flex-direction: column;
+    }
+    .aside-container{
+        flex-direction: column;
+        
+    }
+}
+@media screen and (max-width: 576px){
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        height: 100vh;
+        background: linear-gradient(to right,#000000,#434343);
+        align-items: center;
+        z-index: 1;
+        width: 100%;
+        transform: translateX(100%);
+        transition: all 0.8s;
+        opacity: 0;
+
+    }
+    nav ul.slide{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .hamburger-menu {
+        display: flex;
+    }
+    .introduction{
+        flex-direction: column;
+    }
+}
